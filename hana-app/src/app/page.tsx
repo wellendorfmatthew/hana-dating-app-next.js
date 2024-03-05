@@ -1,16 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+export default function Login() {
   return (
     <div className="background w-screen h-screen flex items-center justify-center">
-      <div className="flex flex-col gap-10 items-center bg-white rounded-3xl p-10">
-        <p className="text-4xl font-semibold">Signup</p>
-        <input type="text" placeholder="Email" className="outline-none border-black border-b-2 text-2xl" />
-        <input type="password" placeholder="Password" className="outline-none border-black border-b-2 text-2xl" />
-        <button className="text-xl font-semibold bg-purple-600 rounded-3xl px-16 py-4 transition hover:bg-purple-500 duration-300">Sign Up</button>
-        <div className="w-[300px] h-[32px] text-base"></div>
-        <p className="text-lg">Already have an account? <Link href={"/login"} className="font-semibold hover:underline transition duration-300">Sign in here</Link></p>
+      <div className="flex flex-col items-center bg-white rounded-3xl shadow-2xl h-[550px] w-[400px]">
+        <p className="text-4xl font-semibold mt-10">Sign In</p>
+        <input type="text" placeholder="Email" className="outline-none border-black border-b-2 text-3xl mt-24 mb-10 w-[300px] pl-1" />
+        <input type="password" placeholder="Password" className="outline-none border-black border-b-2 text-3xl mb-10 w-[300px] pl-1" />
+        <button className="text-xl font-semibold bg-purple-600 rounded-3xl px-16 py-4 transition hover:bg-purple-500 duration-300 mt-10 shadow-xl shadow-purple-600 hover:shadow-purple-500">
+          Sign In
+        </button>
+        <div className="w-[300px] h-[32px] text-base text-wrap"></div>
+        <p className="text-lg mt-4">Don't have an account? <Link href={"/signup"} className="font-semibold hover:underline transition duration-300">Sign up here</Link></p>
       </div>
     </div>
   );
